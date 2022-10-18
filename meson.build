@@ -32,4 +32,4 @@ pkg.generate(name : 'DirectX-Headers',
              libraries : [guids_lib],
              version : meson.project_version(),
              subdirs : install_inc_subdirs)
-install_subdir('include', install_dir : '')
+install_subdir('include', install_dir : get_option('includedir'), strip_directory : true)
